@@ -13,7 +13,7 @@ This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Ne
 </p>
 
 
-An Election dApp where the user can vote for their candidate leveraging the power of Blockchain technology. The smart contract is deployed to the Polygon Mumbai testnet, and the app uses Rainbowkit, Wagmi, TypeScript, and Tailwind CSS. The app also uses Alchemy for the API key for Polygon Mumbai.
+An Election dApp where the user can vote for their candidate leveraging the power of Blockchain technology. The smart contract is deployed to the Polygon Mumbai testnet using the Remix IDE, and the app uses Rainbowkit, Wagmi, TypeScript, and Tailwind CSS. The app also uses Alchemy for the API key for Polygon Mumbai.
 
 ## Advantages of a Decentralized Voting System
 
@@ -33,6 +33,7 @@ An Election dApp where the user can vote for their candidate leveraging the powe
 - TypeScript
 - Tailwind CSS
 - Solidity
+- Remix IDE
 
 ## Installation
 
