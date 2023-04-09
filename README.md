@@ -1,26 +1,48 @@
 This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) project bootstrapped with [`create-rainbowkit`](https://github.com/rainbow-me/rainbowkit/tree/main/packages/create-rainbowkit).
 
-## Getting Started
+# Election dApp
 
-First, run the development server:
+![Tech stack](https://img.shields.io/badge/Tech%20Stack-React%20%7C%20TypeScript%20%7C%20Tailwind%20CSS%20%7C%20Solidity-blue)
 
-```bash
-npm run dev
-```
+An Election dApp where the user can vote for their candidate leveraging the power of Blockchain technology. The smart contract is deployed to the Polygon Mumbai testnet, and the app uses Rainbowkit, Wagmi, TypeScript, and Tailwind CSS. The app also uses Alchemy for the API key for Polygon Mumbai.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Advantages of a Decentralized Voting System
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Increased Transparency: Decentralized voting systems can increase transparency, as all voters can view the results in real-time.
 
-## Learn More
+- Immutable Records: Decentralized voting systems are based on blockchain technology, which means that the records are immutable and cannot be altered.
 
-To learn more about this stack, take a look at the following resources:
+- Increased Security: Decentralized voting systems are highly secure, as they use cryptographic algorithms to protect the data.
 
-- [RainbowKit Documentation](https://rainbowkit.com) - Learn how to customize your wallet connection flow.
-- [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
-- [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
+- Reduced Costs: Decentralized voting systems can reduce the costs associated with traditional voting systems, as they eliminate the need for physical ballot boxes and personnel to count the votes.
 
-You can check out [the RainbowKit GitHub repository](https://github.com/rainbow-me/rainbowkit) - your feedback and contributions are welcome!
+- Increased Accessibility: Decentralized voting systems can increase accessibility for voters, as they can be accessed from anywhere with an internet connection.
+
+## Tech Stack
+
+- React
+- TypeScript
+- Tailwind CSS
+- Solidity
+
+## Installation
+
+1. Clone the repository.
+2. Run `npm install` to install the dependencies.
+3. Create a `.env` file with the following variables:
+   - `REACT_APP_ALCHEMY_KEY`: Your Alchemy API key for Polygon Mumbai.
+   - `REACT_APP_CONTRACT_ADDRESS`: The address of the deployed smart contract.
+   - `REACT_APP_CONTRACT_ABI`: The ABI of the deployed smart contract.
+4. Run `npm start` to start the app.
+
+## Usage
+
+1. Connect your wallet using the Connect button.
+2. Add candidates using the "Add Candidate" button.
+3. Vote for a candidate using the "Vote" button.
+4. View the results on the home screen.
+
+
 
 ## Deploy on Vercel
 
