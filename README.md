@@ -1,26 +1,58 @@
 This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) project bootstrapped with [`create-rainbowkit`](https://github.com/rainbow-me/rainbowkit/tree/main/packages/create-rainbowkit).
 
-## Getting Started
+# Election dApp
 
-First, run the development server:
+<p align="center">
+  <img src="https://img.shields.io/badge/Typescript-007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Solidity-363636.svg?&style=for-the-badge&logo=solidity&logoColor=white" alt="Solidity" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Rainbowkit-FF4154.svg?&style=for-the-badge&logo=rainbow&logoColor=white" alt="Rainbowkit" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Wagmi-414141.svg?&style=for-the-badge&logo=wagmi&logoColor=white" alt="Wagmi" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Polygon_Mumbai-8247E5.svg?&style=for-the-badge&logo=polygon&logoColor=white" alt="Polygon Mumbai" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Alchemy-5B4E9B.svg?&style=for-the-badge&logo=alchemy&logoColor=white" alt="Alchemy" />&nbsp;&nbsp;&nbsp;
+</p>
 
-```bash
-npm run dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+An Election dApp where the user can vote for their candidate leveraging the power of Blockchain technology. The smart contract is deployed to the Polygon Mumbai testnet using the Remix IDE, and the app uses Rainbowkit, Wagmi, TypeScript, and Tailwind CSS. The app also uses Alchemy for the API key for Polygon Mumbai.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Advantages of a Decentralized Voting System
 
-## Learn More
+- Increased Transparency: Decentralized voting systems can increase transparency, as all voters can view the results in real-time.
 
-To learn more about this stack, take a look at the following resources:
+- Immutable Records: Decentralized voting systems are based on blockchain technology, which means that the records are immutable and cannot be altered.
 
-- [RainbowKit Documentation](https://rainbowkit.com) - Learn how to customize your wallet connection flow.
-- [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
-- [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
+- Increased Security: Decentralized voting systems are highly secure, as they use cryptographic algorithms to protect the data.
 
-You can check out [the RainbowKit GitHub repository](https://github.com/rainbow-me/rainbowkit) - your feedback and contributions are welcome!
+- Reduced Costs: Decentralized voting systems can reduce the costs associated with traditional voting systems, as they eliminate the need for physical ballot boxes and personnel to count the votes.
+
+- Increased Accessibility: Decentralized voting systems can increase accessibility for voters, as they can be accessed from anywhere with an internet connection.
+
+## Tech Stack
+
+- React
+- TypeScript
+- Tailwind CSS
+- Solidity
+- Remix IDE
+
+## Installation
+
+1. Clone the repository.
+2. Run `npm install` to install the dependencies.
+3. Create a `.env` file with the following variables:
+   - `REACT_APP_ALCHEMY_KEY`: Your Alchemy API key for Polygon Mumbai.
+   - `REACT_APP_CONTRACT_ADDRESS`: The address of the deployed smart contract.
+   - `REACT_APP_CONTRACT_ABI`: The ABI of the deployed smart contract.
+4. Run `npm start` to start the app.
+
+## Usage
+
+1. Connect your wallet using the Connect button.
+2. Add candidates using the "Add Candidate" button.
+3. Vote for a candidate using the "Vote" button.
+4. View the results on the home screen.
+
+
 
 ## Deploy on Vercel
 
