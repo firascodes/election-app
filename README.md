@@ -52,6 +52,14 @@ An Election dApp where the user can vote for their candidate leveraging the powe
 3. Vote for a candidate using the "Vote" button.
 4. View the results on the home screen.
 
+##Screenshots
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/72166289/230798409-3ef930a1-42d1-4c9e-bc60-4a2b3efad7df.jpg" width="400" height="300">
+  <img src="https://user-images.githubusercontent.com/72166289/230798406-97fba9d4-87c5-4c46-9668-8c8e96b04a65.jpg" width="400" height="300">
+  <img src="https://user-images.githubusercontent.com/72166289/230798408-88ab6520-c820-456e-84be-f93f092253ff.jpg" width="400" height="300">
+</p>
+
 
 
 ## Deploy on Vercel
