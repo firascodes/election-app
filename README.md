@@ -2,10 +2,10 @@ This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Ne
 
 # Election dApp
 
-![Tech stack](https://img.shields.io/badge/Tech%20Stack-React%20%7C%20TypeScript%20%7C%20Tailwind%20CSS%20%7C%20Solidity-blue)
 <p align="center">
   <img src="https://img.shields.io/badge/Typescript-007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript" />&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/solidity-0.8.4-orange" alt="Solidity 0.8^">
   <img src="https://img.shields.io/badge/Rainbowkit-FF4154.svg?&style=for-the-badge&logo=rainbow&logoColor=white" alt="Rainbowkit" />&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/Wagmi-414141.svg?&style=for-the-badge&logo=wagmi&logoColor=white" alt="Wagmi" />&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/Polygon_Mumbai-8247E5.svg?&style=for-the-badge&logo=polygon&logoColor=white" alt="Polygon Mumbai" />&nbsp;&nbsp;&nbsp;
