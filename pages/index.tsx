@@ -7,7 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import AddCandidate from "../Components/AddCandidate";
 import Voting from "../Components/Voting";
 
-import { CONTRACT_ADDRESS, CONTRACT_ABI } from "./CONTRACT";
+import { CONTRACT_ADDRESS, CONTRACT_ABI } from "../CONTRACT";
 import dynamic from "next/dynamic";
 
 export type Candidate = {
