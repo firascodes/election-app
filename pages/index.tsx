@@ -3,11 +3,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useAccount, useContract, useSigner } from "wagmi";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import AddCandidate from "../Components/AddCandidate";
 import Voting from "../Components/Voting";
 
 import { CONTRACT_ADDRESS, CONTRACT_ABI } from "./CONTRACT";
+import dynamic from "next/dynamic";
 
 export type Candidate = {
   id: number;
@@ -15,12 +16,23 @@ export type Candidate = {
   party: string;
   imageUri: string;
   votes: number;
-  totalVotes: number;
 };
 
 const Home: NextPage = () => {
+
   const { address } = useAccount();
   const [screen, setScreen] = useState("home"); //can be home. AddCandidate or Vote.
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
+  // const [totalVotes, setTotalVotes] = useState<number>(0);
+
+  const { data: signer } = useSigner();
+
+  const contract = useContract({
+    address: CONTRACT_ADDRESS,
+    abi: CONTRACT_ABI,
+    signerOrProvider: signer,
+  });
+
 
   const RenderScreen = () => {
     return (
@@ -36,23 +48,23 @@ const Home: NextPage = () => {
 
   //CONTRACT FUNCTIONS
 
-  const [candidates, setCandidates] = useState<Candidate[]>([]);
-  const [totalVotes, setTotalVotes] = useState<number>(0);
+  
 
-  const getTotalVotes = async () => {
-    try {
-      // Fetches the total number of votes and sets the state with the count.
-      const count = await contract!.totalVotes();
-      console.log("Total Votes ", count.toString());
-      setTotalVotes(count.toNumber());
-      return 0;
-    } catch (err) {
-      console.log(err);
-      return 0;
-    }
-  };
+ const getTotalVotes = useCallback(async () => {
+  try {
+    // Fetches the total number of votes and sets the state with the count.
+    const count = await contract!.totalVotes();
+    console.log("Total Votes ", count.toString());
+    // setTotalVotes(count.toNumber());
+    return count.toNumber();
+  } catch (err) {
+    console.log(err);
+    return 0;
+  }
+}, [contract]);
 
-  const getCandidates = async () => {
+
+  const getCandidates = useCallback(async () => {
     try {
       // Fetches the total number of candidates and loops over each candidate to create a candidate object and store them in an array.
       const count = await contract!.candidateCount();
@@ -68,7 +80,6 @@ const Home: NextPage = () => {
           party: candidate[1],
           imageUri: candidate[2],
           votes: votes.toNumber(),
-          totalVotes: totalVotes,
         };
         candidatesArr.push(candidate_obj);
       }
@@ -78,15 +89,9 @@ const Home: NextPage = () => {
       console.log(err);
       return [];
     }
-  };
+  }, [contract]);
 
-  const { data: signer } = useSigner();
-
-  const contract = useContract({
-    address: CONTRACT_ADDRESS,
-    abi: CONTRACT_ABI,
-    signerOrProvider: signer,
-  });
+  
 
   // console.log(contract);
 
@@ -117,17 +122,11 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    // Fetch candidates and total votes again after a vote is cast
-    getCandidates();
-    getTotalVotes();
-  }, [voteCount]);
-
-  useEffect(() => {
     const fetchTotalVotes = async () => {
       const count = await getTotalVotes();
-      setTotalVotes(count);
+      // setTotalVotes(count);
     };
-
+  
     if (contract) {
       // Runs `getCandidates()` and `getTotalVotes()` on the initial render and when the contract changes.
       getCandidates();
@@ -142,7 +141,7 @@ const Home: NextPage = () => {
   return (
     <div className="bg-black text-white">
       <div className="flex items-center justify-between flex-row px-6 py-4">
-        {/* Logo */}
+        
         <h1 className="text-2xl font-bold">Decentralized Election App</h1>
         <ConnectButton />
       </div>
@@ -176,4 +175,5 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default dynamic (() => Promise.resolve(Home), {ssr: false})
+
