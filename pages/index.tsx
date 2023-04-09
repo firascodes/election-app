@@ -133,7 +133,7 @@ const Home: NextPage = () => {
       getCandidates();
       fetchTotalVotes();
     }
-  }, [contract]);
+  }, [contract, getCandidates, getTotalVotes]);
 
   // console.log(candidates)
 
