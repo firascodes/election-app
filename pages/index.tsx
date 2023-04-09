@@ -118,6 +118,7 @@ const Home: NextPage = () => {
       setVoteCount(voteCount + 1);
     } catch (err) {
       console.log(err);
+      alert("You have Already Voted");
     }
   };
 

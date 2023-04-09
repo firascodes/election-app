@@ -3,7 +3,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider , darkTheme, midnightTheme} from '@rainbow-me/rainbowkit';
 import type { AppProps } from 'next/app';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { arbitrum, goerli, mainnet, optimism, polygon, polygonMumbai } from 'wagmi/chains';
+import { polygonMumbai } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
@@ -12,7 +12,7 @@ const { chains, provider, webSocketProvider } = configureChains(
     polygonMumbai,
   ],
   [
-    alchemyProvider({ apiKey: process.env.REACT_APP_ALCHEMY_ID! }),
+    alchemyProvider({ apiKey: "0C_hTPn5ZkyoL3j2_AR-3bwo9OVgXQsH" }),
     publicProvider()
   ]
 );
